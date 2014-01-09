@@ -1,1 +1,7 @@
 <h1><%= @musician.name %></h1>
+<h3>Bands:</h3>
+<ul>
+  <% @musician.bands.each do |band| %>
+    <li><%= band.name %></li>
+  <% end %>
+</ul>

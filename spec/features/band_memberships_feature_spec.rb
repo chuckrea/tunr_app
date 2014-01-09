@@ -18,7 +18,7 @@ describe BandMembershipsController do
       end
     end
   end
-  describe "Given a Band and a Musician" do
+  describe "Given a Band and a Musician relationship" do
     before do
       @band = Band.create name: "Rage Against The Machine" 
       @musician = Musician.create name: "Tom Morello"
@@ -31,6 +31,15 @@ describe BandMembershipsController do
       it "shows a Band's name and its musicians" do
         page.should have_content(@band.name)
         page.should have_content(@musician.name)
+      end
+    end
+    describe "starting at a musician's show page" do
+      before do
+        visit musician_path(@musician)
+      end
+      it "shows the musician and the bands they belong to" do
+        page.should have_content(@musician.name)
+        page.should have_content(@band.name)
       end
     end
   end
