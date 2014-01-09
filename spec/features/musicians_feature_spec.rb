@@ -16,5 +16,18 @@ describe MusiciansController do
         page.should have_content(@name)
       end
     end
-  end
+  end 
+  describe "Given a musician" do
+      before do
+        @musician = Musician.create name: "Tom Morello"
+      end
+      describe "Starting on a musician's show page" do
+        before do
+          visit musician_path(@musician)
+        end
+        it "display's that musician's information" do
+          page.should have_content(@musician.name)
+        end
+      end
+    end
 end
