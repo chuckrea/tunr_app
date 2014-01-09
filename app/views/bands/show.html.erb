@@ -1,0 +1,7 @@
+<h1><%= @band.name %></h1>
+<h3>Members:</h3>
+<ul>
+  <% @band.musicians.each do |musician| %>
+  <li><%= musician.name %></li>
+  <% end %>
+</ul>
