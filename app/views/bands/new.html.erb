@@ -8,6 +8,6 @@
 <%= form_for @band do |f| %>
   <%= f.label :name, "" %>
   <%= f.text_field :name, placeholder: "Name", class: "form-control" %> <!-- to style the form -->
-  <%= f.submit nil, class:"btn btn-primary" %> <!-- to style the button -->
+  <%= f.submit nil, class:"btn btn-primary", id:"submit" %> <!-- to style the button -->
 <% end %>
 </div>

@@ -5,6 +5,7 @@ class MusiciansController < ApplicationController
   end
 
   def new
+
   end
 
   def create
@@ -17,6 +18,18 @@ class MusiciansController < ApplicationController
   def show
 
     @musician = Musician.find(params[:id])
+  end
+
+  def edit
+    @musician = Musician.find(params[:id])
+  end
+
+  def update
+
+    musician = Musician.find(params[:id])
+    musician.name = params[:musician][:name]
+    musician.savegit 
+    redirect_to musician_path(musician)
   end
 
 end
