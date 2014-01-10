@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe MusiciansController do
-  describe "Given a musician name" do
+  describe "Given a musician" do
     before do
       @musician = Musician.new name: "Diana Ross"
     end

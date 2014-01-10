@@ -20,4 +20,20 @@ class BandsController < ApplicationController
     @band = Band.find(params[:id])
 
   end
+
+  def edit
+    @band = Band.find(params[:id])
+  end
+
+  def update
+    band = Band.find(params[:id])
+    band.name = params[:band][:name]
+    band.save
+    redirect_to band_path(band)
+  end
+
+  def destroy
+    Band.delete(params[:id])
+    redirect_to bands_path
+  end
 end

@@ -5,9 +5,5 @@
 </form>
 -->
 <div class="col-md-3">
-<%= form_for @band do |f| %>
-  <%= f.label :name, "" %>
-  <%= f.text_field :name, placeholder: "Name", class: "form-control" %> <!-- to style the form -->
-  <%= f.submit nil, class:"btn btn-primary", id:"submit" %> <!-- to style the button -->
-<% end %>
+<%= render partial: "band_form", locals: {band: @band} %>
 </div>
