@@ -5,7 +5,7 @@ class MusiciansController < ApplicationController
   end
 
   def new
-
+    @musician = Musician.new
   end
 
   def create
