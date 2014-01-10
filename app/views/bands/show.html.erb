@@ -1,5 +1,6 @@
 <h1><%= @band.name %></h1>
 <h3>Members:</h3>
+<div class="col-md-3">
 <table class="table">
   <% @band.musicians.each do |musician| %>
   <tr>
@@ -10,3 +11,4 @@
 
 <a href="<%= new_band_membership_path %>"><button type="button" class="btn btn-success">Add A Musician To This Band!</button></a>
 <a href="<%= bands_path %>"><button type="button" class="btn btn-success">Back To All Bands</button></a>
+</div>

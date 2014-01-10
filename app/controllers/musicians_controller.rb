@@ -9,7 +9,7 @@ class MusiciansController < ApplicationController
   end
 
   def create
-    name = params[:name]
+    name = params[:musician][:name]
     Musician.create(name: name)
 
     redirect_to musicians_path

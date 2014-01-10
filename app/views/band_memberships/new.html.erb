@@ -1,3 +1,5 @@
+
+<h1>Form a Band</h2>
 <form class="form-inline" action="<%= band_memberships_path %>" method="post">
   
   <select class="form-control" name="musician_id">
@@ -12,9 +14,9 @@
     <% end %>
     </select>
 
-    <button class="btn" id="submit">CREATE NEW BAND MEMBERSHIP</button>
+    <button class="btn btn-danger" id="submit">CREATE NEW BAND MEMBERSHIP</button>
 </form>
 
-<div class="col-md-2">
-<a href="<%= root_path %>"><button type="button" class="btn btn-success btn-block">Back To Home</button></a>
+<div class="col-md-2" style="margin-top: 15px;">
+<a href="<%= root_path %>" type="button" class="btn btn-success btn-block">Back To Home</a>
 </div>

@@ -1,4 +1,8 @@
 body {
-  background-image: url("equalizer.jpg");
+  background-image: url("equalizer_edit.jpg");
   
+}
+
+h1, h3 {
+  color: white;
 }

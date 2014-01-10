@@ -1,11 +1,15 @@
 <h1><%= @musician.name %></h1>
 <h3>Bands:</h3>
-<ul>
+<div class="col-md-3">
+<table>
   <% @musician.bands.each do |band| %>
-    <li><a href="<%= band_path(band) %>"><%= band.name %></a></li>
+    <tr>
+      <td><a href="<%= band_path(band) %>"><%= band.name %></a></td>
+    </tr>
   <% end %>
-</ul>
+</table>
 
-<a href="<%= new_band_membership_path %>"><button type="button" class="btn btn-success">Add This Musician To A Band!</button></a>
+<a href="<%= new_band_membership_path %>" type="button" class="btn btn-success btn-block">Add This Musician To A Band!</a>
 
-<a href="<%= musicians_path %>"><button type="button" class="btn btn-success">Back To All Musicians</button></a>
+<a href="<%= musicians_path %>" type="button" class="btn btn-success btn-block">Back To Musicians</a>
+</div>

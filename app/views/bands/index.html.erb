@@ -1,4 +1,5 @@
 <h1 style="color:white;">Bands</h1>
+<div class="col-md-3">
 <table class="table">
   <% @bands.each do |band| %>
     <tr class="band_<%= band.id %>">
@@ -13,4 +14,5 @@
   <% end %>
 </table>
 
-<a href="<%= root_path %>"><button type="button" class="btn btn-success">Back To Home</button></a>
+<a href="<%= root_path %>" type="button" class="btn btn-success">Back To Home</a>
+</div>
