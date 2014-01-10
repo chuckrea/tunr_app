@@ -1,17 +1,20 @@
-<form action="<%= band_memberships_path %>" method="post">
+<form class="form-inline" action="<%= band_memberships_path %>" method="post">
   
-  <select name="musician_id">
+  <select class="form-control" name="musician_id">
     <% @musicians.each do |musician| %>
     <option value="<%= musician.id %>"><%= musician.name %></option>
     <% end %>
     </select>
 
-    <select name="band_id">
+    <select class="form-control" name="band_id">
     <% @bands.each do |band| %>
     <option value="<%= band.id %>"><%= band.name %></option>
     <% end %>
     </select>
 
-    <button id="submit">CREATE NEW BAND MEMBERSHIP</button>
-    
+    <button class="btn" id="submit">CREATE NEW BAND MEMBERSHIP</button>
 </form>
+
+<div class="col-md-2">
+<a href="<%= root_path %>"><button type="button" class="btn btn-success btn-block">Back To Home</button></a>
+</div>

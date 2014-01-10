@@ -1,7 +1,11 @@
 <h1>Musicians</h1>
 
-<ul>
+<table class="table">
 <% @musicians.each do |musician| %>
-  <li><%= musician.name %></li>
+  <tr>
+    <td><a href="<%= musician_path(musician) %>"><%= musician.name %></a></td>
+  </tr>
 <% end %>
-</ul>
+</table>
+
+<a href="<%= root_path %>"><button type="button" class="btn btn-success">Back To Home Page</button></a>

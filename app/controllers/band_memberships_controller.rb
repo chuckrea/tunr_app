@@ -1,8 +1,5 @@
 class BandMembershipsController < ApplicationController
 
-  def index
-    
-  end
 
   def new
     @musicians = Musician.all
