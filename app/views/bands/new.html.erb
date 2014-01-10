@@ -1,4 +1,12 @@
+<!--
 <form class="form-inline" action="<%= bands_path %>" method="post">
   <input type="text" name="name">
   <input class="btn" type="submit" id="submit">
 </form>
+-->
+
+<%= form_for @band do |f| %>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name, placeholder: "Name" class: "form-control"%> <!-- to style the form -->
+  <%= f.submit nil, class:"btn btn-primary" %> <!-- to style the button -->
+<% end %>

@@ -6,12 +6,12 @@ class BandsController < ApplicationController
   end
 
   def new
-
+    @band = Band.new
   end
 
   def create
 
-    Band.create(name: params[:name])
+    Band.create(name: params[:band][:name])
     redirect_to bands_path
   end
 
