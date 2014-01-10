@@ -2,8 +2,14 @@
 
 <table class="table">
 <% @musicians.each do |musician| %>
-  <tr>
+  <tr class="musician_<%=musician.id %>">
     <td><a href="<%= musician_path(musician) %>"><%= musician.name %></a></td>
+    <td>
+      <form action="<%= musician_path(musician) %>" method="post">
+      <input type="hidden" value="delete" name="_method">
+      <button class="delete btn-link">DELETE</button>
+      </form>
+    </td>
   </tr>
 <% end %>
 </table>

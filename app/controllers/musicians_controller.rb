@@ -28,8 +28,13 @@ class MusiciansController < ApplicationController
 
     musician = Musician.find(params[:id])
     musician.name = params[:musician][:name]
-    musician.savegit 
+    musician.save
     redirect_to musician_path(musician)
+  end
+
+  def destroy
+    Musician.delete(params[:id])
+    redirect_to musicians_path
   end
 
 end

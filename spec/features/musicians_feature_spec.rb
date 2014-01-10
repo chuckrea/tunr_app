@@ -49,5 +49,24 @@ describe MusiciansController do
           end
         end
       end
+      describe "when we visit the index page" do
+        before do
+          visit musicians_path
+        end
+        describe "when we click the delete button" do
+          before do
+            within "tr.musician_#{@musician.id}" do
+              click_button "DELETE"
+            end
+          end
+          it "should leave us on the index page" do
+            current_path.should == musicians_path
+          end
+          it "should no longer have the band" do
+            page.should_not have_content(@musician.name)
+          end
+
+        end
+      end
     end
 end
